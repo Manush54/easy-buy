@@ -1,4 +1,5 @@
 import './App.css'
+import Login from './Login.js'
 import Header from './Header.js'
 import Home from './Home.js'
 import Checkout from './Checkout.js'
@@ -9,6 +10,9 @@ function App() {
 		<Router>
 			<div className='app'>
 				<Switch>
+					<Route path='/login'>
+						<Login />
+					</Route>
 					<Route exact path='/'>
 						<Header />
 						<Home />

@@ -13,7 +13,7 @@ function Home() {
 
 				<div className='home__row'>
 					<Product
-						id='129'
+						id='128'
 						title='The Lean StartUp'
 						image='https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg'
 						price={398}
@@ -39,9 +39,9 @@ function Home() {
 					<Product
 						id='131'
 						title='Amazon Echo (3rd Generation | Smart Speaker with Alexa Charcoal Fabric'
+						image='https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$'
 						price={2000}
 						rating={3}
-						image='https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$'
 					/>
 					<Product
 						id='132'
@@ -56,9 +56,9 @@ function Home() {
 					<Product
 						id='135'
 						title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor - Super Ultra Wide Dual WQHD 5120 x 1440"
+						image='https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg'
 						price={46233}
 						rating={4}
-						image='https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg'
 					/>
 				</div>
 			</div>
