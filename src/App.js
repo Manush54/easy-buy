@@ -4,9 +4,10 @@ import './App.css'
 import Header from './Header.js'
 import Home from './Home.js'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Login from './Login.js'
 import Checkout from './Checkout.js'
 import Payment from './Payment.js'
-import Login from './Login.js'
+import Orders from './Orders.js'
 import { useStateValue } from './StateProvider'
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
@@ -44,12 +45,12 @@ function App() {
 		<Router>
 			<div className='app'>
 				<Switch>
-					<Route path='/login'>
-						<Login />
-					</Route>
 					<Route exact path='/'>
 						<Header />
 						<Home />
+					</Route>
+					<Route path='/login'>
+						<Login />
 					</Route>
 					<Route path='/checkout'>
 						<Header />
@@ -60,6 +61,10 @@ function App() {
 						<Elements stripe={promise}>
 							<Payment />
 						</Elements>
+					</Route>
+					<Route path='/orders'>
+						<Header />
+						<Orders />
 					</Route>
 				</Switch>
 			</div>
