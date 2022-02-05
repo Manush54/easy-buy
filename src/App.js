@@ -5,8 +5,15 @@ import Header from './Header.js'
 import Home from './Home.js'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Checkout from './Checkout.js'
+import Payment from './Payment.js'
 import Login from './Login.js'
 import { useStateValue } from './StateProvider'
+import { loadStripe } from '@stripe/stripe-js'
+import { Elements } from '@stripe/react-stripe-js'
+
+const promise = loadStripe(
+	'pk_test_51KPgG7SCHwpFXNnP1pXETBIY9SLkGJj4CDiWtw1dyYugpOF55ARUaXcZS5SEBShleI71y4Xy1p8ESh1bCY9caBaE00V59EaLSC'
+)
 
 function App() {
 	const [{}, dispatch] = useStateValue()
@@ -47,6 +54,12 @@ function App() {
 					<Route path='/checkout'>
 						<Header />
 						<Checkout />
+					</Route>
+					<Route path='/payment'>
+						<Header />
+						<Elements stripe={promise}>
+							<Payment />
+						</Elements>
 					</Route>
 				</Switch>
 			</div>
