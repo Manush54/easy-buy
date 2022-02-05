@@ -1,12 +1,14 @@
-import { React, useState } from 'react'
+import { React, useEffect, useState } from 'react'
 import './Payment.css'
 import { useStateValue } from './StateProvider'
 import CheckoutProduct from './CheckoutProduct.js'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import CurrencyFormat from 'react-currency-format'
 import { getBasketTotal } from './reducer.js'
+import axios from './axios'
 
+// *************************** MAIN FUNCTION ***********************************
 function Payment() {
 	const [{ basket, user }, dispatch] = useStateValue()
 
@@ -14,6 +16,9 @@ function Payment() {
 	// www.stripe.com
 	const stripe = useStripe()
 	const elements = useElements()
+
+	// Link History
+	const history = useHistory()
 
 	// Payment Success Flag
 	const [succeeded, setSucceeded] = useState(false)
@@ -25,7 +30,55 @@ function Payment() {
 	const [error, setError] = useState(null)
 	const [disabled, setDisabled] = useState(true)
 
-	const handleSubmit = (e) => {}
+	// Client Secret Code for making the transaction via Stripe
+	const [clientSecret, setClientSecret] = useState(true)
+
+	useEffect(() => {
+		// generate the special stripe secret which allows us to charge a customer
+		// Gets Updated every time an item is added/deleted b'coz the transaction amount changes as well
+		const getClientSecret = async () => {
+			// GET And POST Request from Stripe
+			// response will have the "response" recieved from Stripe
+			const response = await axios({
+				method: 'post',
+				// Stripe expects the total in a currencies Subunits (paisa)
+				url: `/payments/create?total=${getBasketTotal(basket) * 100}`,
+			})
+			setClientSecret(response.data.clientSecret)
+		}
+
+		getClientSecret()
+	}, [basket])
+
+	console.log('THE SECRET IS >>>', clientSecret)
+
+	const handleSubmit = async (e) => {
+		e.preventDefault()
+		setProcessing(true)
+
+		// A promise request to Stripe and the repsonse is "awaited"
+		const payload = await stripe
+			.confirmCardPayment(clientSecret, {
+				payment_method: {
+					card: elements.getElement(CardElement),
+				},
+			})
+			.then(({ paymentIntent }) => {
+				// paymentIntent = payment confirmation
+
+				// If the paymentIntent is positive:
+				setSucceeded(true)
+				setError(null) //No errors
+				setProcessing(false) //Processing done
+
+				// Empty the basket after successful payment
+				dispatch({
+					type: 'EMPTY_BASKET',
+				})
+
+				history.replace('/orders')
+			})
+	}
 
 	const handleChange = (e) => {
 		// Listen for changes in the Card Element

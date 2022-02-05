@@ -1,0 +1,43 @@
+[debug] [2022-02-05T08:58:29.938Z] ----------------------------------------------------------------------
+[debug] [2022-02-05T08:58:29.940Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-02-05T08:58:29.940Z] CLI Version:   10.1.4
+[debug] [2022-02-05T08:58:29.940Z] Platform:      win32
+[debug] [2022-02-05T08:58:29.940Z] Node Version:  v17.3.0
+[debug] [2022-02-05T08:58:29.947Z] Time:          Sat Feb 05 2022 14:28:29 GMT+0530 (India Standard Time)
+[debug] [2022-02-05T08:58:29.948Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-02-05T08:58:30.021Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-02-05T08:58:30.021Z] > authorizing via signed-in user (manushshah.ict19@gmail.com)
+[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
+[debug] [2022-02-05T08:58:30.144Z] [hub] writing locator at C:\Users\Dell\AppData\Local\Temp\hub-easy-buy-b6550.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub, storage\u001b[22m"}}
+[warn] !  Your requested "node" version "16" doesn't match your global version "17". Using node@17 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"17\". Using node@17 from host."}}
+[debug] [2022-02-05T08:58:30.175Z] defaultcredentials: writing to file C:\Users\Dell\AppData\Roaming\firebase\manushshah_ict19_gmail.com_application_default_credentials.json
+[debug] [2022-02-05T08:58:30.181Z] Setting GAC to C:\Users\Dell\AppData\Roaming\firebase\manushshah_ict19_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Dell\\AppData\\Roaming\\firebase\\manushshah_ict19_gmail.com_application_default_credentials.json"}}
+[debug] [2022-02-05T08:58:30.184Z] > refreshing access token with scopes: []
+[debug] [2022-02-05T08:58:30.184Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-02-05T08:58:30.514Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Sat, 05 Feb 2022 08:58:30 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-05T08:58:30.531Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/easy-buy-b6550/adminSdkConfig [none]
+[debug] [2022-02-05T08:58:31.314Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/easy-buy-b6550/adminSdkConfig 200
+[debug] [2022-02-05T08:58:31.314Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/easy-buy-b6550/adminSdkConfig {"projectId":"easy-buy-b6550","databaseURL":"https://easy-buy-b6550-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"easy-buy-b6550.appspot.com"}
+[debug] [2022-02-05T08:58:31.333Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/easy-buy-b6550/sites 
+[debug] [2022-02-05T08:58:33.368Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/easy-buy-b6550/sites 200
+[debug] [2022-02-05T08:58:33.368Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/easy-buy-b6550/sites {"sites":[{"name":"projects/512621710687/sites/easy-buy-b6550","defaultUrl":"https://easy-buy-b6550.web.app","appId":"1:512621710687:web:347d6ef487014ff8a53aea","type":"DEFAULT_SITE"}]}
+[debug] [2022-02-05T08:58:33.368Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/easy-buy-b6550/webApps/1:512621710687:web:347d6ef487014ff8a53aea/config [none]
+[debug] [2022-02-05T08:58:36.075Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/easy-buy-b6550/webApps/1:512621710687:web:347d6ef487014ff8a53aea/config 200
+[debug] [2022-02-05T08:58:36.075Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/easy-buy-b6550/webApps/1:512621710687:web:347d6ef487014ff8a53aea/config {"projectId":"easy-buy-b6550","appId":"1:512621710687:web:347d6ef487014ff8a53aea","databaseURL":"https://easy-buy-b6550-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"easy-buy-b6550.appspot.com","apiKey":"AIzaSyAkF0hePpjHl5OJmsBtmhEt8c2aXOnGPYc","authDomain":"easy-buy-b6550.firebaseapp.com","messagingSenderId":"512621710687","measurementId":"G-73XQS7S9Z1"}
+[info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2022-02-05T08:58:36.121Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-02-05T08:58:36.122Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-02-05T08:58:36.122Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Dell\\.cache\\firebase\\emulators\\ui-v1.6.4\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Dell\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.6.4\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-02-05T08:58:36.248Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "C:\Users\Dell\Dropbox\My PC (DESKTOP-G02SH5B)\Desktop\easy-buy\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\Dell\\Dropbox\\My PC (DESKTOP-G02SH5B)\\Desktop\\easy-buy\\functions\" for Cloud Functions..."}}
+[debug] [2022-02-05T08:58:36.420Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2022-02-05T08:58:36.421Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
+[debug] [2022-02-05T08:58:36.421Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2022-02-05T08:58:36.421Z] [worker-~diagnostic~-21f31193-58b4-4cf0-ab32-87cfed397e14]: Assigning socketPath: \\?\pipe\C:\Users\Dell\Dropbox\My PC (DESKTOP-G02SH5B)\Desktop\easy-buy\functions\364 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-21f31193-58b4-4cf0-ab32-87cfed397e14]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\Dell\\Dropbox\\My PC (DESKTOP-G02SH5B)\\Desktop\\easy-buy\\functions\\364"}}
+[debug] [2022-02-05T08:58:36.421Z] [worker-~diagnostic~-21f31193-58b4-4cf0-ab32-87cfed397e14]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-21f31193-58b4-4cf0-ab32-87cfed397e14]: BUSY"}}

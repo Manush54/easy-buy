@@ -45,6 +45,12 @@ export const reducer = (state, action) => {
 				...state,
 				user: action.user,
 			}
+
+		case 'EMPTY_BASKET':
+			return {
+				...state,
+				basket: [],
+			}
 			// Return the current state by defualt
 			defualt: return state
 	}
