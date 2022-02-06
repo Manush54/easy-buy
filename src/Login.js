@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Login.css'
+import logo from './Resources/EasyBuyLogo.png'
 import { Link, useHistory } from 'react-router-dom'
 import { auth } from './firebase'
 
@@ -33,10 +34,7 @@ function Login() {
 	return (
 		<div className='login'>
 			<Link to='/'>
-				<img
-					className='login__logo'
-					src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Amazon.com-Logo.svg/1200px-Amazon.com-Logo.svg.png'
-				/>
+				<img className='login__logo' src={logo} />
 			</Link>
 
 			<div className='login__container'>

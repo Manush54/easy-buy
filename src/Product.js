@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Product.css'
 import { useStateValue } from './StateProvider'
 
 function Product({ id, title, image, price, rating }) {
 	const [state, dispatch] = useStateValue()
+	const [bought, setBought] = useState(false)
 
 	const addToBasket = () => {
+		setBought(true)
 		//dispatcth the item into the data layer
 		dispatch({
 			type: 'ADD_TO_BASKET',
@@ -24,7 +26,7 @@ function Product({ id, title, image, price, rating }) {
 	return (
 		<div className='product'>
 			<div className='product__info'>
-				<p>{title}</p>
+				<p className='product__title'>{title}</p>
 				<p className='product__price'>
 					<small>₹</small>
 					<strong>{price}</strong>

@@ -1,12 +1,12 @@
 .login {
-	background-color: #c4c5ff;
+	background-color: #131921;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 .login__logo {
-	margin: 40px auto 40px auto;
+	margin: auto;
 	object-fit: contain;
 	width: 200px;
 }

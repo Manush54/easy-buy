@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css'
+import logo from './Resources/EasyBuyLogo.png'
 import SearchIcon from '@mui/icons-material/Search'
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag'
 import { Link } from 'react-router-dom'
@@ -17,10 +18,7 @@ function Header() {
 	return (
 		<div className='header'>
 			<Link to='/'>
-				<img
-					className='header__logo'
-					src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
-				/>
+				<img className='header__logo' src={logo} />
 			</Link>
 
 			<div className='header__search'>
@@ -56,7 +54,7 @@ function Header() {
 					<span className='header__optionLineTwo'>Prime</span>
 				</div>
 				<Link to='/checkout'>
-					<div className='header__optionBasket'>
+					<div className='header__optionsBasket'>
 						<ShoppingBagIcon />
 						<span className='header__optionLineTwo header__basketCount'>
 							{basket?.length}
