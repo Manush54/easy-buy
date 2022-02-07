@@ -26,6 +26,7 @@ function CheckoutProduct({ id, image, title, price, rating, hidebutton }) {
 							<p>⭐</p>
 						))}
 				</div>
+				<br />
 				{/* !hidebutton --> Removes the hide button on the Orders Page */}
 				{!hidebutton && (
 					<button onClick={removefrombasket}>Remove from Cart</button>

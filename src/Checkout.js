@@ -9,14 +9,9 @@ function Checkout() {
 	return (
 		<div className='checkout'>
 			<div className='checkout__left'>
-				<img
-					src='https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_jpg'
-					alt='Ad'
-					className='checkout__ad'
-				/>
 				<div>
 					<div>
-						<h3>Hello {user ? user.email.split('@')[0] : 'Guest'}!</h3>
+						<h2>Hello {user ? user.email.split('@')[0] : 'Guest'}!</h2>
 						<h2 className='checkout__title'>Your Shopping Cart</h2>
 						{basket.map((item) => (
 							<CheckoutProduct
@@ -30,7 +25,7 @@ function Checkout() {
 					</div>
 				</div>
 			</div>
-			<div className='checkout_right'>
+			<div className='checkout__right'>
 				<Subtotal />
 			</div>
 		</div>
