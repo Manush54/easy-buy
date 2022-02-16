@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Header.css'
+import './css/Header.css'
 import logo from './Resources/EasyBuyLogo.png'
 import SearchIcon from '@mui/icons-material/Search'
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag'

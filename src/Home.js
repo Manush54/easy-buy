@@ -1,5 +1,5 @@
 import React from 'react'
-import './Home.css'
+import './css/Home.css'
 import coverpic from './Resources/EasyBuyHome.png'
 import Product from './Product.js'
 function Home() {

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { auth } from './firebase'
-import './App.css'
+import './css/App.css'
 import Header from './Header.js'
 import Home from './Home.js'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
