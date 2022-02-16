@@ -8,7 +8,7 @@ A simple e-commerce website to ease the shopping experience. It is easily scalab
 
 # Pages and it's functionalities.
 * Sign Up/Sign In page :  Create an account with email address and password and Sign in with the same credentials every time. The technical user sign-up / sign-in part uses firebase api. 
-* ![image](https://user-images.githubusercontent.com/61927733/154223165-2f74be25-9859-4aa2-84f2-14596601a399.png)
+![image](https://user-images.githubusercontent.com/61927733/154223165-2f74be25-9859-4aa2-84f2-14596601a399.png)
 
 * Home page : Sign in / sign up Toggle, Orders Page navigation and Basket counter.
 ![image](https://user-images.githubusercontent.com/61927733/154223246-bdb41fcb-5be9-4e84-b3e9-c26be628ef63.png)
