@@ -7,19 +7,19 @@ A simple e-commerce website to ease the shopping experience. It is easily scalab
 * Payment gateway - Stripe.com
 
 # Pages and it's functionalities.
-* Sign Up/Sign In page :  Create an account with email address and password and Sign in with the same credentials every time. The technical user sign-up / sign-in part uses firebase api. 
+* <h2>Sign Up/Sign In page</h2> Create an account with email address and password and Sign in with the same credentials every time. The technical user sign-up / sign-in part uses firebase api. 
 ![image](https://user-images.githubusercontent.com/61927733/154223165-2f74be25-9859-4aa2-84f2-14596601a399.png)
 
-* Home page : Sign in / sign up Toggle, Orders Page navigation and Basket counter.
+* <h2>Home page</h2> Sign in / sign up Toggle, Orders Page navigation and Basket counter.
 ![image](https://user-images.githubusercontent.com/61927733/154223246-bdb41fcb-5be9-4e84-b3e9-c26be628ef63.png)
 
-* Cart Page : Products in cart, Review/Modify Cart, Sum Total component and Proceed to Checkout function.
+* <h2>Cart Page</h2> Products in cart, Review/Modify Cart, Sum Total component and Proceed to Checkout function.
 ![image](https://user-images.githubusercontent.com/61927733/154223384-58aae961-2ceb-4308-9906-ad3f12abbce6.png)
 
-* CheckOut Page : Products in cart, Review/Modify Cart, Card Details entry, and Payment processing through Stripe test mode.
+* <h2>CheckOut Page</h2> Products in cart, Review/Modify Cart, Card Details entry, and Payment processing through Stripe test mode.
 ![image](https://user-images.githubusercontent.com/61927733/154223628-682b616e-8e27-48d0-b4c5-8022ffd89d0e.png)
 
-* Orders Page : All the previous orders are saved on this page. 
+* <h2>Orders Page </h2> All the previous orders are saved on this page. 
 ![image](https://user-images.githubusercontent.com/61927733/154223766-0b7e78ce-f78f-40d1-a83f-d0c0e103e132.png)
 
 # Working Demo
